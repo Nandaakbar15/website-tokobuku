@@ -1,0 +1,32 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mysql"
+    url = env("DATABASE_URL")
+}
+
+enum Role {
+    admin
+    pelanggan
+}
+
+
+model User {
+    id Int @id @default(autoincrement())
+    username String
+    email String @unique
+    password String
+    role Role @default(pelanggan)
+}
+
+model Buku {
+    id_buku Int @id @default(autoincrement())
+    judul_buku String
+    penulis String
+    penerbit String
+    stok Int
+    harga Int
+    gambar String
+}
