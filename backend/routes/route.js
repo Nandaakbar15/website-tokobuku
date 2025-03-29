@@ -14,7 +14,7 @@ router.get("/api/logout", logout);
 // route api register
 router.post("/api/register", register);
 
-router.get("/api/admin/databuku", authMiddleware, getAllBuku);
+router.get("/api/admin/databuku", getAllBuku);
 
 router.get("/api/admin/databuku/:id_buku", authMiddleware, getAllBukuById);
 

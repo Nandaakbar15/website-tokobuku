@@ -25,3 +25,11 @@ export function BtnRegister() {
         </div>
     );
 }
+
+export function BtnTambah() {
+    return (
+        <div className="button-add">
+            <button className="btn btn-primary">Tambah</button>
+        </div>
+    );
+}
