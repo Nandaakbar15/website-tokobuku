@@ -5,6 +5,9 @@ import RegisterPage from './Register'
 import DashboardAdmin from './pages/dashboard/dashboardAdmin'
 import DashboardPelanggan from './pages/dashboardpelanggan/dashboardPelanggan'
 import DataBukuAdmin from './pages/dashboard/databuku/indexbuku'
+import FormTambahBuku from './pages/dashboard/databuku/tambahdatabuku'
+import FormUbahBuku from './pages/dashboard/databuku/ubahdatabuku'
+import DataUser from './pages/dashboard/datauser/indexuser'
 
 function App() {
 
@@ -16,6 +19,9 @@ function App() {
         <Route path='/register' element={<RegisterPage/>}></Route>
         <Route path='/admin/dashboardadmin' element={<DashboardAdmin/>}></Route>
         <Route path='/admin/databuku' element={<DataBukuAdmin/>}></Route>
+        <Route path='/admin/tambahdatabuku' element={<FormTambahBuku/>}></Route>
+        <Route path='/admin/ubahdatabuku/:id_buku' element={<FormUbahBuku/>}></Route>
+        <Route path='/admin/datauser' element={<DataUser/>}></Route>
         <Route path='/pelanggan/dashboardpelanggan' element={<DashboardPelanggan/>}></Route>
         </Routes>
     </BrowserRouter>

@@ -33,3 +33,19 @@ export function BtnTambah() {
         </div>
     );
 }
+
+export function BtnUbah() {
+    return (
+        <div className="button-change">
+            <button className="btn btn-info">Ubah</button>
+        </div>
+    );
+}
+
+export function BtnKembali() {
+    return (
+        <div className="button-back">
+            <button className="btn btn-success">Kembali</button>
+        </div>
+    );
+}
