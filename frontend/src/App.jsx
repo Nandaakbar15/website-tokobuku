@@ -8,6 +8,8 @@ import DataBukuAdmin from './pages/dashboard/databuku/indexbuku'
 import FormTambahBuku from './pages/dashboard/databuku/tambahdatabuku'
 import FormUbahBuku from './pages/dashboard/databuku/ubahdatabuku'
 import DataUser from './pages/dashboard/datauser/indexuser'
+import ListBuku from './pages/dashboardpelanggan/listbuku'
+import DetailBuku from './pages/dashboardpelanggan/detailbuku'
 
 function App() {
 
@@ -23,6 +25,8 @@ function App() {
         <Route path='/admin/ubahdatabuku/:id_buku' element={<FormUbahBuku/>}></Route>
         <Route path='/admin/datauser' element={<DataUser/>}></Route>
         <Route path='/pelanggan/dashboardpelanggan' element={<DashboardPelanggan/>}></Route>
+        <Route path='/pelanggan/listbuku' element={<ListBuku/>}></Route>
+        <Route path='/pelanggan/detailbuku/:id_buku' element={<DetailBuku/>}></Route>
         </Routes>
     </BrowserRouter>
   )

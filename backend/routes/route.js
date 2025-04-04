@@ -2,6 +2,10 @@ const express = require("express");
 const router = express();
 const upload = require("../config/upload");
 const {getAllBuku, getAllBukuById, addNewBuku, updateBuku, deleteBuku} = require("../controller/BukuController");
+
+// controller pelanggan
+const {getAllBooks, detailBooks} = require("../controller/PelangganController");
+
 const {getAllUsers, deleteUser} = require("../controller/DataUserController");
 const {login, logout} = require("../controller/LoginController");
 const { authMiddleware } = require("../middleware/auth");
@@ -30,6 +34,9 @@ router.get("/api/admin/datauser", authMiddleware, getAllUsers);
 
 router.delete("/api/admin/hapusUser/:id", deleteUser);
 
+// route api pelanggan
+router.get("/api/pelanggan/listbuku", getAllBooks);
 
+router.get("/api/pelanggan/detailBuku/:id_buku", detailBooks);
 
 module.exports = router;
