@@ -1,10 +1,14 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BtnRegister } from "./components/Button";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function RegisterPage() {
+    useEffect(() => {
+        document.title = "Toko Buku | Register"
+    }, []);
+
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");

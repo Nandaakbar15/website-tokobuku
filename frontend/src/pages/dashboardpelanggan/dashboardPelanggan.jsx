@@ -1,9 +1,13 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "../../components/Banner";
 import Navbar from "../../components/Navbar";
 
 export default function DashboardPelanggan() {
+    useEffect(() => {
+        document.title = "Toko Buku | Dashboard Pelanggan"
+    }, []);
+
     return (
         <div className="container mt-5">
             <div className="row">

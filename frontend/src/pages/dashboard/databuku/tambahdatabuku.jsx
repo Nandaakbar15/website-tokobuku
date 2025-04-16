@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "../../../components/Sidebar";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
@@ -7,6 +7,10 @@ import { BtnKembali, BtnTambah } from "../../../components/Button";
 import Modal from "../../../components/Modal";
 
 export default function FormTambahBuku() {
+    useEffect(() => {
+        document.title = "Toko Buku | Form Tambah Buku Admin"
+    }, [])
+
     const [judulBuku, setJudulBuku] = useState("");
     const [penulis, setPenulis] = useState("");
     const [penerbit, setPenerbit] = useState("");

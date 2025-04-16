@@ -22,6 +22,8 @@ export default function FormUbahBuku() {
     const navigate = useNavigate();
 
     useEffect(() => {
+        document.title = "Toko Buku | Form Ubah Data Buku Admin"
+
         const getBookById = async() => {
             try {
                 const response = await axios.get(`http://localhost:3000/api/admin/databuku/${id_buku}`);

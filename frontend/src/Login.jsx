@@ -1,10 +1,14 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import {Link, useNavigate} from 'react-router-dom';
 import { BtnLogin } from './components/Button';
 
 export default function LoginPage() {
+    useEffect(() => {
+        document.title = "Toko Buku | Login"
+    }, []);
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [role, setRole] = useState("");

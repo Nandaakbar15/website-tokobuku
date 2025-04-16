@@ -35,8 +35,8 @@ export default function Card() {
                             <h6 className="card-title">{book.judul_buku}</h6>
                             <p className="text-muted">{book.penulis}</p>
                             <div className="d-flex justify-content-between">
-                                <small>{book.stok}</small>
-                                <small>{book.harga}</small>
+                                <small>Stock : {book.stok}</small>
+                                <small>Rp. {book.harga}</small>
                             </div>
                         </div>
                     </div>

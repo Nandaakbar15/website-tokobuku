@@ -15,6 +15,8 @@ export default function DataBukuAdmin() {
     const navigate = useNavigate();
 
     useEffect(() => {
+        document.title = "Toko Buku | Data Buku Admin"
+
         getAllBook();
     }, [page]);
 

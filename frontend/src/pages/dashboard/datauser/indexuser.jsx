@@ -12,6 +12,8 @@ export default function DataUser() {
     const navigate = useNavigate();
 
     useEffect(() => {
+        document.title = "Toko Buku | Data User Admin"
+
         getUsers();
     }, []);
 

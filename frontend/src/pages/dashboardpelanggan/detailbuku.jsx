@@ -15,6 +15,8 @@ export default function DetailBuku() {
     const [gambar, setGambar] = useState("");
 
     useEffect(() => {
+        document.title = "Toko Buku | Detail Buku"
+
         const getAllBooksById = async() => {
             try  {
                 const response = await axios.get(`http://localhost:3000/api/pelanggan/detailBuku/${id_buku}`);

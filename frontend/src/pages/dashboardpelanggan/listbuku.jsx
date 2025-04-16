@@ -1,10 +1,14 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "../../components/Banner";
 import Navbar from "../../components/Navbar";
 import Card from "../../components/Card";
 
 export default function ListBuku() {
+    useEffect(() => {
+        document.title = "Toko Buku | List Buku"
+    }, []);
+
     return (
         <>
             <div className="container">
